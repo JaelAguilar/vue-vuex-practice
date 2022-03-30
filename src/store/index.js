@@ -4,7 +4,11 @@ export default createStore({
   state: {
     counter: 0,
   },
-  getters: {},
+  getters: {
+    cuadrado(state) {
+      return state.counter * state.counter
+    },
+  },
   mutations: {
     subirContador(state, random) {
       state.counter += random

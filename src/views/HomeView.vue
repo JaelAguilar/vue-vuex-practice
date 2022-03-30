@@ -3,6 +3,11 @@
   <div class="counter">
     {{ $store.state.counter }}
   </div>
+
+  <div class="squared">
+    {{ $store.state.counter }} <sup>2</sup> ={{ $store.getters.cuadrado }}
+  </div>
+
   <div class="buttons">
     <button @click="$store.dispatch('bajarContador')">-</button>
     <button @click="$store.dispatch('subirContador')">+</button>
@@ -28,5 +33,8 @@ div {
   font-size: 40px;
   width: 100px;
   margin: 0 10px;
+}
+.squared {
+  font-size: 30px;
 }
 </style>
