@@ -1,11 +1,11 @@
 <template>
     <img src="../assets/logo.png" alt="Vue Logo">
     <div class="counter">
-        {{counter}}
+        {{$store.state.counter}}
     </div>
     <div class="buttons">
-        <button @click="bajarContador()">-</button>
-        <button @click="subirContador()">+</button>
+        <button @click="$store.commit('bajarContador')">-</button>
+        <button @click="$store.commit('subirContador')">+</button>
     </div>
 </template>
 
@@ -15,17 +15,6 @@ import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
   name: 'HomeView',
-  data(){
-      return {counter:0}
-  },
-  methods: {
-      bajarContador(){
-          this.counter--
-      },
-      subirContador(){
-          this.counter++
-      }
-  }
 }
 </script>
 <style>

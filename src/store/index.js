@@ -1,11 +1,19 @@
 import { createStore } from 'vuex'
 
 export default createStore({
-  state: {
+    state: {
+        counter: 0,
   },
   getters: {
   },
-  mutations: {
+    mutations: {
+        subirContador(state) {
+            state.counter++
+        },
+        bajarContador(state) {
+            state.counter--
+        }
+        
   },
   actions: {
   },
