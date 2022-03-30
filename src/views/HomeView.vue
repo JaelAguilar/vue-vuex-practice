@@ -1,25 +1,21 @@
 <template>
   <img src="../assets/logo.png" alt="Vue Logo" />
-  <div class="counter">
-    {{ $store.state.counter }}
-  </div>
-
-  <div class="squared">
-    {{ $store.state.counter }} <sup>2</sup> ={{ $store.getters.cuadrado }}
-  </div>
-
-  <div class="buttons">
-    <button @click="$store.dispatch('bajarContador')">-</button>
-    <button @click="$store.dispatch('subirContador')">+</button>
-  </div>
+  <Counter></Counter>
+  <Squared></Squared>
+  <Buttons />
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue"
-
+import Counter from "../components/counter.vue"
+import Squared from "../components/squared.vue"
+import Buttons from "../components/buttons.vue"
 export default {
   name: "HomeView",
+  components: {
+    Counter,
+    Squared,
+    Buttons,
+  },
 }
 </script>
 <style>
